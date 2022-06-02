@@ -31,7 +31,6 @@
  *
  * There is periodic condition. Ghost thickness
  * (overlap) is 1 node.
- * After one communication of blocks, the block 0 turns to
 */
 
 #include "halo.h"
