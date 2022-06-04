@@ -66,12 +66,15 @@ int main(){
 
     block.CreateAllBoundaryArrays();
 
+    std::cout<<"Rank="<<rank<<"\n";
+    std::cout<<"Initial state:\n";
+	block.print(block.GetGhostBox());
+
     for (int i=0;i<10000;i++)
         block.communicate();
     
-	if (rank==1){
-		block.print();
-	}
+	std::cout<<"Final state:\n";
+	block.print(block.GetGhostBox());
 
 	MPI_Finalize();
 }
